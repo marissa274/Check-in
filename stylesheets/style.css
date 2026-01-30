@@ -114,9 +114,14 @@ body{
   padding:12px 12px;
   border-radius:14px;
   border:1px solid var(--line);
-  background: rgba(255,255,255,.03);
+  background: rgba(255,255,255,.06);
   cursor:pointer;
+
+  /* FIX 👇 */
+  color: #ffffff;
+  font-weight: 600;
 }
+
 .choice:hover{ border-color: rgba(125,211,252,.35); }
 .choice.selected{
   border-color: rgba(125,211,252,.65);
