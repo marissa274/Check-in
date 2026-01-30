@@ -1,0 +1,72 @@
+ <!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Check-in humeur (auto-test)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>Check-in humeur</h1>
+      <p class="sub">
+        Petit questionnaire (14 derniers jours). Ce n’est pas un diagnostic.
+      </p>
+    </header>
+
+    <section class="card" id="startCard">
+      <h2>Avant de commencer</h2>
+      <ul class="bullets">
+        <li>Réponds honnêtement (personne ne te juge).</li>
+        <li>Résultat = indication, pas une preuve.</li>
+        <li>Si tu te sens en danger : appelle/texte 9-8-8.</li>
+      </ul>
+      <button class="btn" id="startBtn">Commencer</button>
+    </section>
+
+    <section class="card hidden" id="quizCard">
+      <div class="progress">
+        <div class="bar" id="bar"></div>
+      </div>
+
+      <div class="qbox">
+        <div class="qmeta">
+          <span id="qCount">Question 1/10</span>
+          <span class="pill">14 jours</span>
+        </div>
+        <h2 id="qText">…</h2>
+
+        <div class="choices" id="choices"></div>
+
+        <div class="nav">
+          <button class="btn ghost" id="backBtn" disabled>Retour</button>
+          <button class="btn" id="nextBtn" disabled>Suivant</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultCard">
+      <h2>Ton résultat</h2>
+      <p class="scoreline">
+        Score: <strong id="scoreOut">0</strong> / <span id="maxOut">0</span>
+      </p>
+
+      <div class="badge" id="levelBadge">—</div>
+      <p id="explain" class="explain"></p>
+
+      <div class="tips" id="tips"></div>
+
+      <div class="nav">
+        <button class="btn ghost" id="restartBtn">Refaire le test</button>
+      </div>
+
+      <p class="smallnote">
+        Si tu veux, tu peux me dire ce que tu as obtenu (ex: “modéré”) et je t’aide à interpréter.
+      </p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
