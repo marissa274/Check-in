@@ -122,10 +122,23 @@ body{
   font-weight: 600;
 }
 
-.choice:hover{ border-color: rgba(125,211,252,.35); }
+.choice:hover{
+  background: rgba(255,255,255,.12);
+}
+
+.choice:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .choice.selected{
-  border-color: rgba(125,211,252,.65);
-  background: rgba(125,211,252,.10);
+  border-color: rgba(125,211,252,.85);
+  background: linear-gradient(
+    90deg,
+    rgba(125,211,252,.25),
+    rgba(167,139,250,.25)
+  );
+  color: #ffffff;
 }
 
 .nav{
